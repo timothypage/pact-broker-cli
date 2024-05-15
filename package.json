@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actano/pact-broker-cli.git"
+    "url": "git+https://github.com/timothypage/pact-broker-cli.git"
   },
   "author": "Actano GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actano/pact-broker-cli/issues"
+    "url": "https://github.com/timothypage/pact-broker-cli/issues"
   },
-  "homepage": "https://github.com/actano/pact-broker-cli#readme",
+  "homepage": "https://github.com/timothypage/pact-broker-cli#readme",
   "engines": {
     "node": ">=16",
     "npm": ">=8.3"
