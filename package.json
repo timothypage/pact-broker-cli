@@ -1,0 +1,41 @@
+{
+  "name": "@rplan/pact-broker-cli",
+  "version": "0.3.2",
+  "description": "Some helper functions for pact-broker",
+  "main": "scripts/index.js",
+  "scripts": {
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actano/pact-broker-cli.git"
+  },
+  "author": "Actano GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/actano/pact-broker-cli/issues"
+  },
+  "homepage": "https://github.com/actano/pact-broker-cli#readme",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-actano": "^13.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-mocha-no-only": "^1.1.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0"
+  },
+  "dependencies": {
+    "@pact-foundation/pact-node": "^10.17.2",
+    "superagent": "^7.1.2",
+    "valid-url": "^1.0.9",
+    "yargs": "^15.0.2"
+  },
+  "bin": {
+    "pact-broker-cli": "./scripts/index.js"
+  }
+}

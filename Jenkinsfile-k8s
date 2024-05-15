@@ -1,0 +1,57 @@
+library 'jenkins-k8s-pipeline-scripts@v2'
+
+pipeline {
+  agent {
+    label "jenkins-nodejs-16"
+  }
+  stages {
+    stage('Install') {
+      steps {
+        ansiColor('xterm') {
+          container('nodejs') {
+            script {
+              npm.withAuth() {
+                sh "PACT_SKIP_BINARY_INSTALL=true npm install"
+              }
+            }
+          }
+        }
+      }
+    }
+    stage('Lint') {
+      steps {
+        ansiColor('xterm') {
+          container('nodejs') {
+            script {
+              npm.withAuth() {
+                sh "CI=true npm run lint"
+              }
+            }
+          }
+        }
+      }
+    }
+    stage('publish') {
+      when {
+        tag "*"
+      }
+      steps {
+        ansiColor('xterm') {
+          container('nodejs') {
+            script {
+              npm.publish()
+            }
+          }
+        }
+      }
+    }
+  }
+  post {
+    failure {
+      sendNotification currentBuild.result
+    }
+    fixed {
+      sendNotification currentBuild.result
+    }
+  }
+}
