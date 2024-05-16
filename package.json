@@ -1,5 +1,5 @@
 {
-  "name": "@timothypage/pact-broker-cli",
+  "name": "pact-broker-cli",
   "version": "0.3.2",
   "description": "Some helper functions for pact-broker",
   "main": "scripts/index.js",

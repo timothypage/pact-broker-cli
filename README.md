@@ -1,3 +1,5 @@
+a "fork" of @rplan/pact-broker-cli, which was removed from npm
+
 # Pact Broker Client
 
 A client for Pact Broker. Publishes, creates webhooks, verifies pacts. The functionality is available via a CLI.
@@ -6,7 +8,7 @@ A client for Pact Broker. Publishes, creates webhooks, verifies pacts. The funct
 
 ### Install CLI
 
-`npm install @rplan/pact-broker-cli`
+`npm install pact-broker-cli`
 
 ### Usage
 
